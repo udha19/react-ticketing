@@ -10,8 +10,6 @@ type Props = {
 }
 
 export default function SectionTitleLineWithButton({ icon, title, main = false, children }: Props) {
-  const hasChildren = !!Children.count(children)
-
   return (
     <section className={`${main ? '' : 'pt-6'} mb-6 flex items-center justify-between`}>
       <div className="flex items-center justify-start">
