@@ -54,7 +54,6 @@ const ChartLineTicket = ({ tickets }) => {
         pointHoverBorderWidth: 15,
         pointRadius: 4,
         tension: 0.2,
-        cubicInterpolationMode: 'default',
       },
       {
         label: 'Open',
@@ -71,7 +70,6 @@ const ChartLineTicket = ({ tickets }) => {
         pointHoverBorderWidth: 15,
         pointRadius: 4,
         tension: 0.2,
-        cubicInterpolationMode: 'default',
       },
       {
         label: 'On Hold',
@@ -88,7 +86,6 @@ const ChartLineTicket = ({ tickets }) => {
         pointHoverBorderWidth: 15,
         pointRadius: 4,
         tension: 0.2,
-        cubicInterpolationMode: 'default',
       },
       {
         label: 'Resolved',
@@ -105,7 +102,6 @@ const ChartLineTicket = ({ tickets }) => {
         pointHoverBorderWidth: 15,
         pointRadius: 4,
         tension: 0.2,
-        cubicInterpolationMode: 'default',
       },
     ],
   }
