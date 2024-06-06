@@ -1,6 +1,4 @@
-import { mdiCog } from '@mdi/js'
-import React, { Children, ReactNode } from 'react'
-import Button from '../Button'
+import { Children, ReactNode } from 'react'
 import Icon from '../Icon'
 import IconRounded from '../Icon/Rounded'
 

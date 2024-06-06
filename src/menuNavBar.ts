@@ -1,15 +1,7 @@
 import {
-  mdiMenu,
-  mdiClockOutline,
-  mdiCloud,
-  mdiCrop,
   mdiAccount,
   mdiCogOutline,
-  mdiEmail,
-  mdiLogout,
-  mdiThemeLightDark,
-  mdiGithub,
-  mdiVuejs,
+  mdiEmail, mdiThemeLightDark
 } from '@mdi/js'
 import { MenuNavBarItem } from './interfaces'
 
@@ -41,8 +33,6 @@ const menuNavBar: MenuNavBarItem[] = [
       },
     ],
   },
- 
-  
 ]
 
 export default menuNavBar

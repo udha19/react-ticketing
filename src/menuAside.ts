@@ -1,9 +1,11 @@
 import {
   mdiAccountCircle,
-  mdiMonitor, mdiTable, mdiAccountSupervisorCircle,
+  mdiMonitor,
+  mdiTable,
+  mdiAccountSupervisorCircle,
   mdiCog,
   mdiLicense,
-  mdiLightbulb
+  mdiLightbulb,
 } from '@mdi/js'
 import { MenuAsideItem } from './interfaces'
 

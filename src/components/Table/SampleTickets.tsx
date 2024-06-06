@@ -1,13 +1,4 @@
-import {
-  mdiCheck,
-  mdiClose,
-  mdiEye,
-  mdiRefresh,
-  mdiRefreshCircle,
-  mdiSearchWeb,
-  mdiSort,
-  mdiTrashCan,
-} from '@mdi/js'
+import { mdiCheck, mdiClose, mdiRefresh, mdiSearchWeb, mdiSort } from '@mdi/js'
 import { useEffect, useState } from 'react'
 import { useTicketData } from '../../hooks/sampleData'
 import Button from '../Button'
@@ -204,6 +195,7 @@ const TableSampleTickets = () => {
           </tr>
         </thead>
         <tbody>
+          {/* eslint-disable-next-line */}
           {ticketsPaginated?.map((tickets: any) => (
             <tr key={tickets?.ticket_id}>
               <td className="border-b-0 lg:w-6 before:hidden">
