@@ -15,13 +15,15 @@ const TableSampleTickets = () => {
   const [ticketData, setTicketData] = useState([])
   const perPage = 10
 
-  const [currentPage, setCurrentPage] = useState(0)
+  const [currentPage, setCurrentPage] = useState(1)
 
   const setPrevPage = (prev) => {
+    dataMutation(ticketData)
     setCurrentPage(prev)
   }
 
   const setNextPage = (next) => {
+    dataMutation(ticketData)
     setCurrentPage(next)
   }
   const [ticketsPaginated, setTicketsPaginated] = useState([])
@@ -30,6 +32,10 @@ const TableSampleTickets = () => {
     const ticket = sorted?.slice(perPage * currentPage, perPage * (currentPage + 1))
     setTicketsPaginated(ticket)
   }
+  useEffect(() => {
+    dataMutation(ticketData)
+  }, [currentPage])
+
   useEffect(() => {
     const ticket = ticketData?.slice(perPage * currentPage, perPage * (currentPage + 1))
     setTicketsPaginated(ticket)
@@ -195,7 +201,6 @@ const TableSampleTickets = () => {
           </tr>
         </thead>
         <tbody>
-          {/* eslint-disable-next-line */}
           {ticketsPaginated?.map((tickets: any) => (
             <tr key={tickets?.ticket_id}>
               <td className="border-b-0 lg:w-6 before:hidden">
@@ -249,7 +254,7 @@ const TableSampleTickets = () => {
                     key={index}
                     small
                     onClick={() => setCurrentPage(index)}
-                    disabled={page === '...' || index === currentPage}
+                    disabled={page === '...' || page === currentPage}
                     color={page === currentPage ? 'lightDark' : 'whiteDark'}
                     label={page}
                   />
@@ -266,7 +271,7 @@ const TableSampleTickets = () => {
                 <Button
                   key={page}
                   active={page === currentPage}
-                  label={page + 1}
+                  label={page}
                   color={page === currentPage ? 'lightDark' : 'whiteDark'}
                   small
                   onClick={() => setCurrentPage(page)}
@@ -275,7 +280,7 @@ const TableSampleTickets = () => {
             )}
           </Buttons>
           <small className="mt-6 md:mt-0">
-            Page {currentPage + 1} of {lastPage}
+            Page {currentPage} of {lastPage}
           </small>
         </div>
       </div>
