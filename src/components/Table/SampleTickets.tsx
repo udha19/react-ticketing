@@ -201,6 +201,7 @@ const TableSampleTickets = () => {
           </tr>
         </thead>
         <tbody>
+        {/* eslint-disable @typescript-eslint/no-explicit-any */}
           {ticketsPaginated?.map((tickets: any) => (
             <tr key={tickets?.ticket_id}>
               <td className="border-b-0 lg:w-6 before:hidden">
